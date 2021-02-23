@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-
+from scipy.ndimage.interpolation import shift
 
 
 def plot_digit(data):
@@ -75,7 +75,7 @@ def plot_precision_recall_vs_threshold(precisions, recalls, thresholds):
 
 def plot_precision_vs_recall(precisions, recalls):
     '''
-    This function plots the ROC curve
+    This function plots precision vs recall
     '''
     #changing figure size
     plt.figure(figsize=(8, 6))
@@ -96,3 +96,29 @@ def plot_precision_vs_recall(precisions, recalls):
     plt.show()
 
 
+def plot_roc_curve(fpr, tpr, label):
+    '''
+    This function plots the ROC curve
+    '''
+    #adjusting figure size
+    plt.figure(figsize=(8, 6))
+    #plot true positive rate and false positive rate
+    plt.plot(fpr, tpr, linewidth=2, label=label)
+    #plot dotted line representing even ratio
+    plt.plot([0, 1], [0, 1], 'k--')
+    #label and configure axis
+    plt.axis([0, 1, 0, 1])                                     
+    plt.xlabel('False Positive Rate (Fall-Out)', fontsize=16) 
+    plt.ylabel('True Positive Rate (Recall)', fontsize=16)    
+    plt.grid(True)
+    plt.legend(loc="lower right", fontsize=16)                                                                           
+    plt.show()
+
+
+def shift_image(image, dx, dy):
+    '''
+    This function will shift an image by dx and dy
+    '''
+    image = image.reshape((28, 28))
+    shifted_image = shift(image, [dy, dx], cval=0, mode="constant")
+    return shifted_image.reshape([-1])
