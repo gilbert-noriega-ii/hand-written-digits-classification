@@ -1,7 +1,9 @@
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+
 from scipy.ndimage.interpolation import shift
+
 
 
 def plot_digit(data):
