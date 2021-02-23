@@ -6,7 +6,7 @@
 <h1 align = "center">Handwritten Digits Classifier</h1>
 <p align = "center">Author: Gilbert Noriega</p>
 
-[About the Project](#section_1) || [Data Dictionary](#section_2) ||  [Project Plan](#section_4) || [How to Reproduce](#section_5)
+[About the Project](#section_1) || [Project Plan](#section_4) || [How to Reproduce](#section_5)
 
 
 <br>
@@ -39,29 +39,6 @@ ___
 
 ___
 
-<br>
-
-<a id='section_2'></a>
-## Data Dictionary
-
-| Features | Definition |
-| :------- | :-------|
-|  |  |
-
-
-
-<br>
-
-|  Target  | Definition |
-|:-------- |:---------- |
-|  |  |
-
-<br>
-
-
-
-[back to the top](#section_6)
-___
 
 <br>
 
@@ -69,33 +46,24 @@ ___
 ## Project Plan: Breaking it Down
 
 >- acquire
->    - acquire data
->    - turn into a pandas dataframe
->    - summarize the data
->    - plot distribution
+>    - acquire from MNIST
 >
 >- prepare
->    - address data that could mislead models
->    - create features
 >    - scale the data
->    - split into train, validate, test
+>    - split into train/test
 >
 >- explore
->    - retrieve correlation values of all variables
 >    - create correlation charts
 >    - document and consider the results for modeling
 >
 >- model and evaluation
->    - find which features are most influential 
 >    - try different algorithms
 >    - evaluate on train
 >    - evaluate on validate
 >    - fine tune hyperparameters
->    - select best model and test to verify
 >
 >- conclusion
 >    - summarize findings
->    - provide next steps
 
 
 [back to the top](#section_6)
@@ -107,8 +75,7 @@ ___
 <a id='section_5'></a>
 ## How to Reproduce
 
->1. Download csv from [here](link here)
->2. Run a jupyter notebook importing the necessary libraries and functions.
->3. Follow along in final_notebook.ipynb or forge your own exploratory path. 
+>1. Run a jupyter notebook importing the necessary libraries and functions.
+>2. Follow along in final_notebook.ipynb or forge your own exploratory path. 
 
 [back to the top](#section_6)
